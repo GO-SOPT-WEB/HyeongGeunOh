@@ -71,7 +71,7 @@ aside #menu_wrapper span:hover {
 }
 
 /* MAIN */
-main {
+div {
   display: flex;
   flex-direction: row;
 }
@@ -149,7 +149,7 @@ nav #type_wrapper article input {
   background-color: black;
 }
 #card_section article .material-symbols-outlined {
-  color: white;
+  color: #29dd8c;
   margin: 20px 20px 0 0;
   align-self: flex-end;
   cursor: pointer;
