@@ -11,3 +11,10 @@
 23.04.02
 
 - 브랜치 생성 및 폴더 재구성
+
+23.04.03
+
+- todomate 초기 구성
+- todomate header, calendar, todolist 제작 중
+
+- 폰트 설정, 아이콘 설정하기
