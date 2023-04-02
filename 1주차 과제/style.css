@@ -1,0 +1,110 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+body {
+  background-color: #00203f;
+}
+
+/* HAEDER */
+header {
+  height: 100px;
+  display: flex;
+  background-color: #adefd1;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  margin-left: 20px;
+  font-weight: 800;
+}
+header .material-symbols-outlined {
+  margin-right: 20px;
+  transform: scale(1.3);
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* NAV */
+nav #type_wrapper {
+  width: 200px;
+  margin: 10px 0 0 10px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #68dca7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+nav #type_wrapper article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 10px;
+}
+nav #type_wrapper article input {
+  margin-right: 5px;
+}
+
+/* CARD SECTION */
+#card_section {
+  margin: 10px 10px 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#card_section article {
+  width: auto;
+  height: 300px;
+  min-width: 300px;
+  border-radius: 20px;
+  background-color: #adefd1;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+}
+#card_section article h2 {
+  margin-top: 10px;
+}
+#card_section article .tag_wrapper {
+    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+#card_section article .tag_wrapper span {
+  font-size: 15px;
+  color: gray;
+}
+#card_section article .tag_wrapper span::before {
+  content: "#";
+}
+#card_section article img {
+  height: 20vh;
+  background-color: black;
+}
+#card_section article .material-symbols-outlined {
+  color: white;
+  margin: 20px 20px 0 0;
+  align-self: flex-end;
+  cursor: pointer;
+}
+#card_section article .material-symbols-outlined:hover {
+  color: black;
+}
