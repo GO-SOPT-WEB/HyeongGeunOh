@@ -120,7 +120,7 @@ nav #type_wrapper article input {
   gap: 20px;
 }
 #card_section article {
-  width:fit-content;
+  width: fit-content;
   height: 300px;
   min-width: 200px;
   border-radius: 20px;
@@ -128,6 +128,7 @@ nav #type_wrapper article input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 1;
 }
 #card_section article h2 {
   margin-top: 10px;
@@ -161,4 +162,12 @@ nav #type_wrapper article input {
 }
 #card_section article .material-symbols-outlined:hover {
   color: black;
+}
+@media (max-width: 689px) {
+  #card_section {
+    justify-content: center;
+  }
+  #card_section article {
+    width: 60%
+  }
 }
