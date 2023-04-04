@@ -63,7 +63,7 @@ main {
     left: 9px;
     top: 6px;
 }
-#calendar article .material-symbols-outlined.today {
+#calendar .today {
     color: #c295d8;
 }
 
@@ -118,6 +118,9 @@ main {
 #todo article .todos_wrapper p .material-symbols-outlined {
     color:#f2e4f9;
     transform: scale(0.8);
+}
+#todo article .todos_wrapper p .material-symbols-outlined.checked {
+    color: #ef9776;
 }
 
 /* FOOTER */
