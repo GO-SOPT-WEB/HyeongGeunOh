@@ -134,13 +134,16 @@ nav #type_wrapper article input {
   margin-top: 10px;
 }
 #card_section article .tag_wrapper {
+  width: 10rem;
+  height: 15px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5px;
   margin-bottom: 20px;
-  overflow: hidden;
+  flex-wrap: wrap;
+  overflow-y: hidden;
 }
 #card_section article .tag_wrapper span {
   font-size: 15px;
