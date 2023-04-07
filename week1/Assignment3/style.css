@@ -16,8 +16,11 @@ body {
 
 /* HAEDER */
 header {
+  top: 0;
+  width: 100vw;
   height: 100px;
   background-color: #adefd1;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +79,8 @@ aside #menu_wrapper span:hover {
 }
 
 /* MAIN */
-div {
+#nav_section_wrapper {
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
 }
