@@ -6,8 +6,8 @@
  
  | 주차  | 과제 내용             | 🔗 링크 |
 | ----- | --------------------- | ------- |
-| 1주차 | Keshi's songs ||
-| 1주차 | Todo mate ||
-| 1주차 |  📚 Web Optimization    | |
+| 1주차 | Keshi's songs | [링크](https://geun-oh.github.io/geunoh.github.io/week1/Assignment3/)|
+| 1주차 | Todo mate |[링크](https://geun-oh.github.io/geunoh.github.io/week1/Assignment4/)|
+| 1주차 |  📚 Web Optimization    | [링크](https://github.com/GO-SOPT-WEB/HyeongGeunOh/blob/week1/week1/%EC%83%9D%EA%B0%81%EA%B3%BC%EC%A0%9C.md)|
 
 </div>
