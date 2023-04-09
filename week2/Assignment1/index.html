@@ -2,12 +2,169 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/style.module.css" />
+    <title>Keshi's Song</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <!-- <header>
+      <h1>🎶 keshi's song 🎶</h1>
+      <span class="material-symbols-outlined">menu</span>
+      <aside>
+        <h1>메뉴</h1>
+        <div id="menu_wrapper">
+          <span>새 상품 추가</span>
+          <span>찜 목록</span>
+        </div>
+      </aside>
+    </header> -->
+    <div id="nav_section_wrapper">
+      <nav>
+        <section id="type_wrapper">
+          <h3>종류</h3>
+          <article>
+            <input type="checkbox" />
+            전체
+          </article>
+          <article>
+            <input type="checkbox" />
+            Lo-Fi 🎧
+          </article>
+          <article>
+            <input type="checkbox" />
+            Band 🥁
+          </article>
+          <article>
+            <input type="checkbox" />
+            Pop 🎵
+          </article>
+        </section>
+      </nav>
+      <section id="card_section">
+        <article>
+          <h2>Blue</h2>
+          <div class="tag_wrapper">
+            <span>tag1</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/blue.png.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>2soon</h2>
+          <div class="tag_wrapper">
+            <span>tag1</span>
+            <span>tag2</span>
+          </div>
+          <img src="./src/assets/2soon.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Alright</h2>
+          <div class="tag_wrapper">
+            <span>tag1</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/alright.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>It's you</h2>
+          <div class="tag_wrapper">
+            <span>tag1</span>
+            <span>tag2</span>
+            <span>tag3</span>
+            <span>tag4</span>
+          </div>
+          <img src="./src/assets/it's you.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Less of you</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/less of you.jpg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Xoxosos</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/xoxosos.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>More</h2>
+          <div class="tag_wrapper">
+            <span>tag2</span>
+            <span>tag3</span>
+            <span>tag1234</span>
+          </div>
+          <img src="./src/assets/more.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Summer</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/summer.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>The reaper</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/the reaper.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Touch</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/touch.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+        <article>
+          <h2>Us</h2>
+          <div class="tag_wrapper">
+            <span>Guitar</span>
+            <span>tag2</span>
+            <span>tag3</span>
+          </div>
+          <img src="./src/assets/us.jpeg" alt="Cover image of blue" />
+          <span class="material-symbols-outlined">favorite</span>
+        </article>
+      </section>
+    </div>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
