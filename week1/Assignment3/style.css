@@ -82,7 +82,6 @@ aside #menu_wrapper span:hover {
 #nav_section_wrapper {
   margin-top: 100px;
   display: flex;
-  flex-direction: row;
 }
 
 /* NAV */
@@ -98,7 +97,6 @@ nav #type_wrapper {
 }
 nav #type_wrapper article {
   display: flex;
-  flex-direction: row;
   align-items: center;
   height: 30px;
   background-color: whitesmoke;
@@ -118,7 +116,6 @@ nav #type_wrapper article input {
   margin: 10px 10px 0 20px;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
@@ -142,7 +139,6 @@ nav #type_wrapper article input {
   height: 15px;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 5px;
   margin-bottom: 20px;
