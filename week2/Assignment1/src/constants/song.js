@@ -1,47 +1,48 @@
-import { LO_FI, BAND, POP } from "./songTypes"
+import { LO_FI, BAND, POP } from "./songTags";
+import imgChunk from "../assets";
 
 const song = [
     {
         name: "Blue",
-        tag: [BAND, "tag2", "tag3"],
-        imgURL: '../assets/blue.jpeg'
+        tagList: [BAND, "tag2", "tag3"],
+        imgURL: imgChunk.BlueImg,
     },
     {
         name: "2soon",
-        tag: [LO_FI, "tag2", "tag3"],
-        imgURL: '../assets/2soon.jpeg'
+        tagList: [LO_FI, "tag2", "tag3"],
+        imgURL: imgChunk.ToSoonImg,
     },    {
         name: "Alright",
-        tag: [LO_FI, "tag2", "tag3", "tag4"],
-        imgURL: '../assets/alright.jpeg'
+        tagList: [LO_FI, "tag2", "tag3", "tag4"],
+        imgURL: imgChunk.AlrightImg
     },    {
         name: "It's you",
-        tag: [LO_FI, "tag2", "tag3"],
-        imgURL: "../assets/it's you.jpeg"
+        tagList: [LO_FI, "tag2", "tag3"],
+        imgURL: imgChunk.ItsYouImg
     },    {
         name: "Less of you",
-        tag: [POP, "tag2", "tag3"],
-        imgURL: '../assets/less of you.jpeg'
+        tagList: [POP, "tag2", "tag3"],
+        imgURL: imgChunk.LessOfYouImg
     },    {
         name: "Xoxosos",
-        tag: [POP, "tag2", "tag3"],
-        imgURL: '../assets/xoxosos.jpeg'
+        tagList: [POP, "tag2", "tag3"],
+        imgURL: imgChunk.XoxososImg
     },    {
         name: "MORE",
-        tag: [BAND, "tag2"],
-        imgURL: '../assets/more.jpeg'
+        tagList: [BAND, "tag2"],
+        imgURL: imgChunk.MoreImg
     },    {
         name: "Summer",
-        tag: [POP, "tag2", "tag3", "tag4", "tag5"],
-        imgURL: '../assets/summer.jpeg'
+        tagList: [POP, "tag2", "tag3", "tag4", "tag5"],
+        imgURL: imgChunk.SummerImg
     },    {
         name: "The reaper",
-        tag: [BAND, "tag2", "tag3"],
-        imgURL: '../assets/the reaper.jpeg'
+        tagList: [BAND, "tag2", "tag3"],
+        imgURL: imgChunk.TheReaperImg
     },    {
         name: "Touch",
-        tag: [LO_FI, "tag2", "tag3", "tag4"],
-        imgURL: '../assets/touch.jpeg'
+        tagList: [LO_FI, "tag2", "tag3", "tag4"],
+        imgURL: imgChunk.TouchImg
     },
 ]
 

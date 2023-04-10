@@ -1,10 +1,8 @@
 const TagCheckBoxView = ({ tag }) => {
-  return `
-  <article>
+  return `<article>
       <input type="checkbox" />
       ${tag}
-  </article>
-  `
+  </article>`
 }
 
 export default TagCheckBoxView;
