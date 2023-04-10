@@ -22,7 +22,8 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     tagButton.addEventListener('click', ({ target }) => {
         tagButtonClickHandler(target);
-        typeWrapper.querySelector(`#${target.innerText}`).setAttribute('checked', false);
+        const clickedTagButton = typeWrapper.querySelector(`#${target.innerText}`);
+        // clickedTagButton.setAttribute('checked', false);
         new TagCheckBox(typeWrapper);
         new SongCards(cardSection);
         new TagButton(tagButton);

@@ -10,6 +10,7 @@ export const tagClickHandler = ({ checked, id }) => {
 };
 
 export const tagButtonClickHandler = ({ innerText }) => {
-    const idx = checkedTags.indexOf(innerText)
-    if (idx > -1) checkedTags.splice(idx, 1)
+    console.log(innerText);
+    const idx = checkedTags.indexOf(innerText);
+    if (idx > -1) checkedTags.splice(idx, 1);
 };

@@ -116,7 +116,16 @@ nav #type_wrapper article input {
 
 /* TAG BUTTON */
 #tag_button {
+  margin: 10px 0 0 20px;
   display: flex;
+}
+#tag_button h1 {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #68dca7;
+  cursor: pointer;
 }
 
 /* CARD SECTION */
