@@ -6,6 +6,9 @@ export const BAND_ID = 'Band';
 export const POP_ID = 'Pop';
 
 export const SongTags = [{
+    tag: '전체',
+    id: '전체'
+}, {
     tag: LO_FI,
     id: LO_FI_ID
 }, {

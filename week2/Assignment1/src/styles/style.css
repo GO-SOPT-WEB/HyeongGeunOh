@@ -114,6 +114,11 @@ nav #type_wrapper article input {
   margin-right: 5px;
 }
 
+/* TAG BUTTON */
+#tag_button {
+  display: flex;
+}
+
 /* CARD SECTION */
 #card_section {
   margin: 10px 10px 0 20px;
