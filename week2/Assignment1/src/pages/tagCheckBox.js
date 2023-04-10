@@ -1,6 +1,5 @@
 import TagCheckBoxView from "../views/tagCheckBoxView";
 import { SongTags } from '../constants/songTags';
-import { checkedTags } from "../handler/tagClickHandler";
 
 function TagCheckBox($container) {
   this.$container = $container;
