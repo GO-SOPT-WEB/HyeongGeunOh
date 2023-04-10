@@ -26,4 +26,14 @@ window.addEventListener("DOMContentLoaded", () => {
         new SongCards(cardSection);
         new TagButton(tagButton);
     });
+    cardSection.addEventListener('click', ({ target }) => {
+        console.log(target);
+        const name = target.id.split("_")[0];
+        const buttonType = target.id.split("_")[1];
+        if (buttonType === 'modalOpenButton') {
+            document.getElementById(`${name}_modal`).style.display = 'flex';
+        } else if (buttonType === 'modalCloseButton') {
+            document.getElementById(`${name}_modal`).style.display = 'none';
+        }
+    });
 });

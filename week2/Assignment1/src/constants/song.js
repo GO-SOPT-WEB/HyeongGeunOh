@@ -8,7 +8,7 @@ const song = [
         imgURL: imgChunk.BlueImg,
     },
     {
-        name: "2soon",
+        name: "2Soon",
         tagList: [LO_FI_ID, "tag2", "tag3"],
         imgURL: imgChunk.ToSoonImg,
     },    {

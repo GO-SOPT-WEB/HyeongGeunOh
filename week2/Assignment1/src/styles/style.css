@@ -223,8 +223,17 @@ nav #type_wrapper article input {
 #card_section article .songCard_modal_wrapper span {
   font-size: 15px;
 }
+#card_section article .songCard_modal_wrapper span.material-symbols-outlined {
+  top: -10px;
+  right: -10px;
+  color: white;
+  position: absolute;
+}
 #card_section article .tag_modalButton_wrapper .tag_wrapper span::before, #card_section article .songCard_modal_wrapper span::before {
   content: "#";
+}
+#card_section article .songCard_modal_wrapper span.material-symbols-outlined::before {
+  content: "";
 }
 @media (max-width: 689px) {
   #card_section {
