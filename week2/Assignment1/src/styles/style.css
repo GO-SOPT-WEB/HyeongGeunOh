@@ -243,3 +243,38 @@ nav #type_wrapper article input {
     width: 60%;
   }
 }
+
+/* ADD CARD */
+#addCard_wrapper {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #29dd8c;
+  background-color: #00203f;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#addCard_wrapper h1 {
+
+}
+#addCard_wrapper form {
+  width: 40vw;
+  height: 60vh;
+  border-radius: 20px;
+  background-color: #364b5f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#addCard_wrapper form .input_wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}

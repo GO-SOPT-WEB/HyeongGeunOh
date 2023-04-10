@@ -29,7 +29,6 @@ function MainPage($container) {
       new TagButton(tagButton);
     });
     cardSection.addEventListener("click", ({ target }) => {
-      console.log(target);
       const name = target.id.split("_")[0];
       const buttonType = target.id.split("_")[1];
       if (buttonType === "modalOpenButton") {
