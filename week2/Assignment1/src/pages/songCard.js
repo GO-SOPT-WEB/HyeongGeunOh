@@ -1,12 +1,15 @@
 import SongCardView from "../views/songCardView";
 import song from "../constants/song";
+import { checkedTags } from "../main";
 
-function SongCard($container) {
+function SongCards($container) {
     this.$container = $container;
     this.render = () => {
-        this.$container.innerHTML = song.map(({ name, tagList, imgURL }) => SongCardView({ name, tagList, imgURL })).join("");
+        const checkedSongs = checkedTags.length === 0 ? song : song.filter(({ tagList }) => checkedTags.includes(tagList[0]));
+        console.log(checkedTags, checkedSongs);
+        this.$container.innerHTML = checkedSongs.map(({ name, tagList, imgURL }) => SongCardView({ name, tagList, imgURL })).join("");
     }
     this.render();
 };
 
-export default SongCard;
+export default SongCards;

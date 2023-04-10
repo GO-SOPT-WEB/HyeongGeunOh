@@ -1,6 +1,6 @@
-const TagCheckBoxView = ({ tag }) => {
+const TagCheckBoxView = ({ tag, id }) => {
   return `<article>
-      <input type="checkbox" />
+      <input type="checkbox" id=${id} />
       ${tag}
   </article>`
 }
