@@ -5,6 +5,7 @@ import {
   tagClickHandler,
 } from "../handler/tagClickHandler";
 import TagButton from "./tagButton";
+import song from '../constants/song';
 
 function MainPage($container) {
   this.$container = $container;
@@ -37,6 +38,22 @@ function MainPage($container) {
         document.getElementById(`${name}_modal`).style.display = "none";
       }
     });
+    const getData = () => {
+      const title = localStorage.getItem('title');
+      const tagList = localStorage.getItem('tagList');
+      const imgURL = localStorage.getItem('imgURL');
+      if (title === null) {
+        return;
+      }
+      console.log(title, tagList, imgURL);
+      song.push({
+        name: title,
+        tagList: [tagList],
+        imgURL
+      });
+      new SongCards(cardSection);
+    };
+    getData();
   };
   
   this.render();
