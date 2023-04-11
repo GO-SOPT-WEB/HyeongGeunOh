@@ -10,9 +10,9 @@ function AddCardPage($container) {
     const form = document.querySelector("form");
 
     imgInput.onchange = () => fileLoadHandler(imgInput);
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', () => {
       addCardSubmitHandler(form);
-    })
+    });
   };
   this.render();
 };
