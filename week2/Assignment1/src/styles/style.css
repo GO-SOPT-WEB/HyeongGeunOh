@@ -278,3 +278,6 @@ nav #type_wrapper article input {
   display: flex;
   justify-content: space-between;
 }
+#addCard_wrapper form img {
+  max-width: 200px;
+}
