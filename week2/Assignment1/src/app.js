@@ -1,7 +1,7 @@
 import MainPage from "./pages/main.js";
 import AddCardPage from "./pages/addCard.js";
 
-const BASE_URL = "http://localhost:5173";
+export const BASE_URL = "http://localhost:5173";
 const ROUTE_LIST = [{ path: "/", element: MainPage }, { path: "/addCard", element: AddCardPage }];
 
 function App($container) {
