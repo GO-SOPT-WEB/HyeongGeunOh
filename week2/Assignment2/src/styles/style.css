@@ -91,13 +91,13 @@ main {
 #todo article h1 .material-symbols-outlined {
   font-size: 1rem;
 }
-#todo article h1.sopt {
+#todo article h1.SOPT {
   background-color: rgb(255, 212, 195);
 }
-#todo article h1.univ {
+#todo article h1.세종대 {
   background-color: rgb(186, 219, 247);
 }
-#todo article h1.workOut {
+#todo article h1.운동 {
   background-color: rgb(189, 247, 221);
 }
 #todo article .todos_wrapper {
