@@ -1,4 +1,5 @@
 import todos from "../assets/todos";
+import { checkedTodos } from "../handler/heartClickHandler";
 import TodayCounterView from "../views/todayCounterView";
 
 function TodayCounter($container) {
@@ -11,6 +12,7 @@ function TodayCounter($container) {
             const key = keys[i];
             task += todos[key].length;
         }
+        task -= checkedTodos.length;
         this.$container.innerHTML = TodayCounterView({ task });
     };
     this.render();

@@ -1,9 +1,10 @@
+import { checkedTodos } from "../handler/heartClickHandler";
 import CheckedTodoView from "./checkedTodoView";
 import NoneCheckedTodoView from "./noneCheckedTodoView";
 
 const CategoryView = ({ categoryName, todoList }) => {
-  const todos = todoList.map(({ content, done }) =>
-    done ? CheckedTodoView({ content }) : NoneCheckedTodoView({ content })
+  const todos = todoList.map(content =>
+    checkedTodos.includes(content) ? CheckedTodoView({ content }) : NoneCheckedTodoView({ content })
   ).join("");
   return `
     <article>

@@ -1,7 +1,7 @@
 const NoneCheckedTodoView = ({ content }) => {
   return `
     <p>
-        <span class="material-symbols-outlined">favorite</span>
+        <span class="material-symbols-outlined" data-content="${content}">favorite</span>
         ${content}
     </p>
     `;
