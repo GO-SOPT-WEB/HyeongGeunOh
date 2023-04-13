@@ -10,7 +10,7 @@ const CategoryView = ({ categoryName, todoList }) => {
     <article>
     <h1 class=${categoryName}>
       ${categoryName}
-      <span class="material-symbols-outlined">add_circle</span>
+      <span class="material-symbols-outlined" data-category=${categoryName}>add_circle</span>
     </h1>
     <div class="todos_wrapper">
       ${todos}

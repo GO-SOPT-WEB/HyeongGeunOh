@@ -1,4 +1,4 @@
-import todos from "../assets/todos";
+import todos from "../store/todos";
 import CategoryView from "../views/categoryView";
 
 function Category($container) {

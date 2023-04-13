@@ -1,4 +1,4 @@
-import todos from "../assets/todos";
+import todos from "../store/todos";
 import { checkedTodos } from "../handler/heartClickHandler";
 import TodayCounterView from "../views/todayCounterView";
 

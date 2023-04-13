@@ -3,8 +3,6 @@ import { renderCategory, renderTodayCounter } from "../pages/renderFunction";
 export const checkedTodos = ['웹팟 첫 세미나', '웹팟 첫 뒤풀이'];
 
 const heartClickHandler = ({ dataset }) => {
-    if (dataset.content === undefined) return;
-
     if (checkedTodos.includes(dataset.content)) {
         const idx = checkedTodos.indexOf(dataset.content)
         if (idx > -1) checkedTodos.splice(idx, 1)
