@@ -7,6 +7,11 @@ const todos = {
     "운동": ['솝케팝 번개', '요가'],
 };
 
+const orginal = ["Hyeonggeun", "SOPT", "세종대", "운동"];
+const local = localStorage.getItem("todosOrder").split(",");
+
+export const todosOrder = local === null ? orginal : orginal !== local ? local : orginal;
+
 export const addTodos = ({ category }) => {
     const modalInput = document.querySelector("#inputContent");
     const content = modalInput.value;
@@ -17,5 +22,13 @@ export const addTodos = ({ category }) => {
     modalInput.value = null;
     document.querySelector("#addTodo_modal").style.display = "none";
 };
+
+export const changeTodos = (first, second) => {
+    const idxF = todosOrder.indexOf(first);
+    const idxS = todosOrder.indexOf(second);
+    todosOrder[idxF] = second;
+    todosOrder[idxS] = first; 
+    console.log(todosOrder);
+}
 
 export default todos;
