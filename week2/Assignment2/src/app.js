@@ -1,7 +1,8 @@
 import MainPage from "./pages/main.js";
+import MyPage from "./pages/myPage.js";
 
 export const BASE_URL = "http://localhost:5174";
-const ROUTE_LIST = [{ path: "/", element: MainPage }];
+const ROUTE_LIST = [{ path: "/", element: MainPage }, { path: "/mycategory", element: MyPage }];
 
 function App($container) {
   this.$container = $container;

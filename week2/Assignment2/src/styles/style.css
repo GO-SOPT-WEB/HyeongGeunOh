@@ -18,6 +18,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.material-symbols-outlined {
+  cursor: pointer;
+}
 
 /* HEADER */
 header {
@@ -163,4 +166,25 @@ footer article {
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
+}
+
+/* MYPAGE */
+#app {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#myPage_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+#myPage_wrapper .category_wrapper {
+  display: flex;
+}
+footer.myPage {
+  height: 15vh;
+  align-self: center;
 }

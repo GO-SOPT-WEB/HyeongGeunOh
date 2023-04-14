@@ -1,23 +1,22 @@
 import heartClickHandler from "../handler/heartClickHandler";
-import { addTodos } from "../store/todos";
 import {
   renderAddTodoModal,
-  renderCategory,
-  renderTodayCounter,
+  renderMainPage,
 } from "./renderFunction";
 
 function MainPage($container) {
   this.$container = $container;
 
   this.render = () => {
+    renderMainPage();
     const todoSection = document.querySelector("#todo");
-    renderTodayCounter();
-    renderCategory();
+    const myButton = document.querySelector("#myPage_button");
+    const calendarButton = document.querySelector("#calendarPage_button");
+    console.log(calendarButton)
     todoSection.addEventListener("click", ({ target }) => {
       switch (target.innerText) {
         case "add_circle":
           renderAddTodoModal(target.dataset);
-          // document.querySelector("#addTodo_modal").style.display = "flex";
           break;
         case "favorite":
           heartClickHandler(target);
@@ -26,6 +25,12 @@ function MainPage($container) {
           return;
       }
     });
+    myButton.addEventListener('click', () => {
+      window.location.href = "/mycategory";
+    });
+    calendarButton.addEventListener('click', () => {
+      window.location.href = "http://localhost:5174/";
+    })
   };
   this.render();
 }

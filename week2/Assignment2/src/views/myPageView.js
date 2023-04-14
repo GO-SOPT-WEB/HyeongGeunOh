@@ -1,0 +1,29 @@
+import todos from "../store/todos";
+
+const MyPageView = () => {
+    const categories = Object.keys(todos).map(key => `<div>${key}</div>`)
+
+    return `
+    <header>
+    <h1>WEB TO DO MATE</h1>
+  </header>
+  <section id="myPage_wrapper">
+    <h3>나의 카테고리</h3>
+    <div class="category_wrapper">
+        ${categories}
+    </div>
+  </section>
+  <footer class="myPage">
+  <article id="calendarPage_button">
+    <span class="material-symbols-outlined today">home</span>
+    달력
+  </article>
+  <article id="myPage_button">
+    <span class="material-symbols-outlined">account_circle</span>
+    MY
+  </article>
+</footer>
+    `
+};
+
+export default MyPageView;
