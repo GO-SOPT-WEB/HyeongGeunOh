@@ -1,25 +1,8 @@
-import MainPage from "./pages/main.js";
-import MyPage from "./pages/myPage.js";
-
-export const BASE_URL = "http://localhost:5174";
-const ROUTE_LIST = [{ path: "/", element: MainPage }, { path: "/mycategory", element: MyPage }];
+import Router from "./components/router.js";
 
 function App($container) {
   this.$container = $container;
-  let currentPage = undefined;
 
-  const init = () => {
-    const findMatchedRoute = () =>
-      ROUTE_LIST.find((route) => route.path === location.pathname);
-
-    const route = () => {
-      currentPage = null;
-      const TargetPage = findMatchedRoute()?.element;
-      currentPage = new TargetPage(this.$container);
-    };
-
-    route();
-  };
-  init();
+  new Router($container);
 }
 export default App;
