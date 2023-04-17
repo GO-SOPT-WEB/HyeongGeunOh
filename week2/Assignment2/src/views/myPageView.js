@@ -1,7 +1,7 @@
 import { todosOrder } from "../store/todos";
 
 const MyPageView = () => {
-    const categories = todosOrder.map(key => `<div class="item" id=${key} draggable="true" droppable="true">${key}</div>`)
+    const categories = todosOrder.map(key => `<div class="item" id=${key} draggable="true" droppable="true">${key}</div>`).join("");
 
     return `
     <header>
