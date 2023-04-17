@@ -28,7 +28,6 @@ export const changeTodos = (first, second) => {
     const idxS = todosOrder.indexOf(second);
     todosOrder[idxF] = second;
     todosOrder[idxS] = first; 
-    console.log(todosOrder);
 }
 
 export default todos;
