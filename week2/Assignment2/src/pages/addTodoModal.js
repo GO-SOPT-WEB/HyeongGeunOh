@@ -6,12 +6,17 @@ function AddTodoModal($container, category) {
 
     this.render = () => {
         this.$container.innerHTML = AddTodoModalView();
-        document
-        .querySelector("#addTodo_modal .input_wrapper button")
+        const addTodoModal = document.querySelector("#addTodo_modal");
+        document.querySelector("#addTodo_modal .input_wrapper button")
         .addEventListener("click", () => {
             addTodos({ category })
-            document.querySelector("#addTodo_modal").style.display = "none";
+            addTodoModal.style.display = "none";
         });
+        addTodoModal.addEventListener('click', ({ target }) => {
+            if (target === addTodoModal) {
+                addTodoModal.style.display = "none";
+            }
+        })
     };
     this.render();
 };
