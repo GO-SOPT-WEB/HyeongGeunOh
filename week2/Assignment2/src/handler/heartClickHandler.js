@@ -1,4 +1,4 @@
-import { renderCategory, renderTodayCounter } from "../pages/renderFunction";
+import { renderCategory, renderTodayCounter } from "../components/renderFunction";
 import todoState from '../store/todos'
 
 const heartClickHandler = ({ dataset }) => {

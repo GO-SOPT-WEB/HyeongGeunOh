@@ -1,4 +1,4 @@
-import { renderCategory, renderTodayCounter } from "../pages/renderFunction";
+import { renderCategory, renderTodayCounter } from "../components/renderFunction";
 
 const todos = {
     "Hyeonggeun": ['베이킹 냠냠', '방정리'],

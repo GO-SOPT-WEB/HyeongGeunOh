@@ -1,4 +1,4 @@
-import { renderAddTodoModal } from "../pages/renderFunction";
+import { renderAddTodoModal } from "../components/renderFunction";
 import heartClickHandler from "./heartClickHandler";
 
 const iconHandler = (target) => {

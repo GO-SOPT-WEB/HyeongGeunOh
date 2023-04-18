@@ -1,6 +1,6 @@
 import { BASE_URL } from "../components/router";
 import iconHandler from "../handler/iconHandler";
-import { renderMainPage } from "./renderFunction";
+import { renderMainPage } from "../components/renderFunction";
 
 function MainPage($container) {
   this.$container = $container;
