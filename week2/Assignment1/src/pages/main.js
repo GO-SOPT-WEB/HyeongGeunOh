@@ -7,15 +7,19 @@ import {
   renderTagCheckBox,
   renderSongCards,
   renderTagButton,
+  renderMainStatic,
 } from "./renderFunction";
 import getData from "../handler/getAddCardData";
 
 function MainPage($container) {
   this.$container = $container;
   this.render = () => {
+    renderMainStatic();
+    
     const typeWrapper = document.querySelector("#type_wrapper");
     const tagButton = document.querySelector("#tag_button");
     const cardSection = document.querySelector("#card_section");
+    const addNewGoodsButton = document.querySelector("#addNewGoods_button");
     renderTagCheckBox();
     renderSongCards();
     renderTagButton();
@@ -28,6 +32,9 @@ function MainPage($container) {
     });
     cardSection.addEventListener("click", ({ target }) => {
       modalOpenHandler(target);
+    });
+    addNewGoodsButton.addEventListener("click", () => {
+      window.location.href = "/addCard";
     });
     getData();
   };

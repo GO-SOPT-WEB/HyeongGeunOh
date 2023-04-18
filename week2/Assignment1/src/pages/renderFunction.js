@@ -1,3 +1,4 @@
+import MainStatic from "./mainStatic";
 import SongCards from "./songCard";
 import TagButton from "./tagButton";
 import TagCheckBox from "./tagCheckBox";
@@ -10,4 +11,7 @@ export const renderSongCards = () => {
 };
 export const renderTagButton = () => {
     new TagButton(document.querySelector("#tag_button"));
+};
+export const renderMainStatic = () => {
+    new MainStatic(document.querySelector("#app"));
 }
