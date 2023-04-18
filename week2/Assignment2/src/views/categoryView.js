@@ -1,13 +1,4 @@
-import todoState from "../store/todos";
-import CheckedTodoView from "./checkedTodoView";
-import NoneCheckedTodoView from "./noneCheckedTodoView";
-
-const CategoryView = ({ categoryName, todoList }) => {
-  const { checkedTodos } = todoState;
-
-  const todos = todoList.map(content =>
-    checkedTodos.includes(content) ? CheckedTodoView({ content }) : NoneCheckedTodoView({ content })
-  ).join("");
+const CategoryView = ({ categoryName, mappedTodos }) => {
   return `
     <article>
     <h1 class=${categoryName}>
@@ -15,7 +6,7 @@ const CategoryView = ({ categoryName, todoList }) => {
       <span class="material-symbols-outlined" data-category=${categoryName}>add_circle</span>
     </h1>
     <div class="todos_wrapper">
-      ${todos}
+      ${mappedTodos}
     </div>
   </article>
     `;
