@@ -1,7 +1,7 @@
 import MainPage from "../pages/mainPage";
 import MyPage from "../pages/myPage";
 
-export const BASE_URL = "http://localhost:5174";
+export const BASE_URL = "http://localhost:5174/";
 const ROUTE_LIST = [
   { path: "/", element: MainPage },
   { path: "/mycategory", element: MyPage },

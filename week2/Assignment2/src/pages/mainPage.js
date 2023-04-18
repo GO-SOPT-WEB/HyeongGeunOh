@@ -1,3 +1,4 @@
+import { BASE_URL } from "../components/router";
 import iconHandler from "../handler/iconHandler";
 import { renderMainPage } from "./renderFunction";
 
@@ -16,7 +17,7 @@ function MainPage($container) {
       window.location.href = "/mycategory";
     });
     calendarButton.addEventListener("click", () => {
-      window.location.href = "http://localhost:5174/";
+      window.location.href = BASE_URL;
     });
   };
   this.render();

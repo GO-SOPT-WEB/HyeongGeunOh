@@ -1,4 +1,5 @@
-import { dragstart, drop } from "../handler/dndHandler";
+import { BASE_URL } from "../components/router";
+import { giveItemsDnDEvent } from "../handler/dndEventHandler";
 import MyPageView from "../views/myPageView";
 
 function MyPage($container) {
@@ -7,23 +8,10 @@ function MyPage($container) {
     this.render = () => {
         this.$container.innerHTML = MyPageView();
         const calendarButton = document.querySelector("#calendarPage_button");
-        const items = document.querySelectorAll(".item");
         calendarButton.addEventListener('click', () => {
-            window.location.href = "http://localhost:5174/";
+            window.location.href = BASE_URL;
           });
-        items.forEach(item => {
-            item.addEventListener('dragstart', (e) => {
-                console.log(e.target.id);
-                dragstart(e);
-            });
-            item.addEventListener('dragover', (e) => {
-                e.preventDefault();
-            })
-            item.addEventListener('drop', (e) => {
-                console.log(e.target.id);
-                drop(e);
-            });
-        })
+        giveItemsDnDEvent();
     };
     this.render();
 };
