@@ -1,4 +1,4 @@
-import MainPage from "../pages/main";
+import MainPage from "../pages/mainPage";
 import MyPage from "../pages/myPage";
 
 export const BASE_URL = "http://localhost:5174";

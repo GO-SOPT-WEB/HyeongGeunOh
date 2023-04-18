@@ -1,0 +1,25 @@
+import iconHandler from "../handler/iconHandler";
+import { renderMainPage } from "./renderFunction";
+
+function MainPage($container) {
+  this.$container = $container;
+
+  this.render = () => {
+    renderMainPage();
+    const todoSection = document.querySelector("#todo");
+    const myButton = document.querySelector("#myPage_button");
+    const calendarButton = document.querySelector("#calendarPage_button");
+    todoSection.addEventListener("click", ({ target }) => {
+      iconHandler(target);
+    });
+    myButton.addEventListener("click", () => {
+      window.location.href = "/mycategory";
+    });
+    calendarButton.addEventListener("click", () => {
+      window.location.href = "http://localhost:5174/";
+    });
+  };
+  this.render();
+}
+
+export default MainPage;
