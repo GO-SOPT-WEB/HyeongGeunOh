@@ -2,7 +2,8 @@ import { checkedTags } from "../handler/tagClickHandler";
 
 const TagCheckBoxView = ({ tag, id }) => {
   if (checkedTags.includes(id)) {
-    return `<article>
+    return `<article style="color: #68dca7;
+    background-color: black;">
     <input type="checkbox" id=${id} checked />
     ${tag}
 </article>`

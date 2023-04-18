@@ -3,12 +3,14 @@ import { renderSongCards, renderTagButton, renderTagCheckBox } from "../pages/re
 export const checkedTags = []
 
 export const tagClickHandler = ({ checked, id }) => {
+    if (checked === undefined) return;
     if (checked) {
         checkedTags.push(id)
     } else {
         const idx = checkedTags.indexOf(id)
         if (idx > -1) checkedTags.splice(idx, 1)
     }
+    renderTagCheckBox();
     renderSongCards();
     renderTagButton();
 };
