@@ -241,6 +241,7 @@ footer article {
   border-radius: 10px;
   background-color: #ef9776;
   box-shadow: 3px 3px 6px lightpink;
+  cursor: pointer;
 }
 footer.myPage {
   height: 15vh;
