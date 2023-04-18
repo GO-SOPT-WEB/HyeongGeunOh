@@ -8,9 +8,9 @@ const todos = {
 };
 
 const orginal = ["Hyeonggeun", "SOPT", "세종대", "운동"];
-const local = localStorage.getItem("todosOrder").split(",");
+const local = localStorage.getItem("todosOrder");
 
-export const todosOrder = local === null ? orginal : orginal !== local ? local : orginal;
+export const todosOrder = local === null ? orginal : orginal !== local.split(",") ? local.split(",") : orginal;
 
 export const addTodos = ({ category }) => {
     const modalInput = document.querySelector("#inputContent");
