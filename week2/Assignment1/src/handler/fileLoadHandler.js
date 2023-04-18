@@ -1,5 +1,4 @@
 const fileLoadHandler = ({ files }) => {
-    console.log(files);
     const file = files[0];
     const container = document.querySelector("#addCard_wrapper form");
     const newImage = document.createElement("img");

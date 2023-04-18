@@ -1,23 +1,22 @@
 import { renderSongCards, renderTagButton, renderTagCheckBox } from "../pages/renderFunction";
-
-export const checkedTags = []
+import checkedTagState from "../constants/songTags";
 
 export const tagClickHandler = ({ checked, id }) => {
+    const { changeCheckedTags } = checkedTagState;
+
     if (checked === undefined) return;
-    if (checked) {
-        checkedTags.push(id)
-    } else {
-        const idx = checkedTags.indexOf(id)
-        if (idx > -1) checkedTags.splice(idx, 1)
-    }
+    changeCheckedTags(checked, id);
+
     renderTagCheckBox();
     renderSongCards();
     renderTagButton();
 };
 
 export const tagButtonClickHandler = ({ innerText }) => {
-    const idx = checkedTags.indexOf(innerText);
-    if (idx > -1) checkedTags.splice(idx, 1);
+    const { deleteCheckedTag } = checkedTagState;
+
+    deleteCheckedTag(innerText);
+
     renderTagCheckBox();
     renderSongCards();
     renderTagButton();

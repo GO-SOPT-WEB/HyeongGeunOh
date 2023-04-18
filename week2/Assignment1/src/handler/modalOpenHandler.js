@@ -1,5 +1,4 @@
 const modalOpenHandler = ({ id }) => {
-    console.log(id);
   const name = id.split("_")[0];
   const buttonType = id.split("_")[1];
   if (buttonType === "modalOpenButton") {
