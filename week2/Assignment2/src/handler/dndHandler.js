@@ -1,5 +1,7 @@
 import MyPage from "../pages/myPage";
-import { changeTodos, todosOrder } from "../store/todos";
+import todoState from "../store/todos";
+
+const { changeTodos, todosOrder } = todoState;
 
 export const dragstart = ({ target }) => {
     localStorage.setItem("drag", target.id);

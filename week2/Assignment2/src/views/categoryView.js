@@ -1,8 +1,10 @@
-import { checkedTodos } from "../handler/heartClickHandler";
+import todoState from "../store/todos";
 import CheckedTodoView from "./checkedTodoView";
 import NoneCheckedTodoView from "./noneCheckedTodoView";
 
 const CategoryView = ({ categoryName, todoList }) => {
+  const { checkedTodos } = todoState;
+
   const todos = todoList.map(content =>
     checkedTodos.includes(content) ? CheckedTodoView({ content }) : NoneCheckedTodoView({ content })
   ).join("");

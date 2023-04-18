@@ -1,6 +1,7 @@
-import { todosOrder } from "../store/todos";
+import todoState from "../store/todos";
 
 const MyPageView = () => {
+    const { todosOrder } = todoState;
     const categories = todosOrder.map(key => `<div class="item" id=${key} draggable="true" droppable="true">${key}</div>`).join("");
 
     return `

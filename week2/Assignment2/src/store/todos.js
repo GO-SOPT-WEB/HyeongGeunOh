@@ -6,13 +6,12 @@ const todos = {
     "세종대": ['캡스톤 발표', 'UX/UI 디자인'],
     "운동": ['솝케팝 번개', '요가'],
 };
-
-const orginal = ["Hyeonggeun", "SOPT", "세종대", "운동"];
+const checkedTodos = ['웹팟 첫 세미나', '웹팟 첫 뒤풀이'];
+const keys = Object.keys(todos);
 const local = localStorage.getItem("todosOrder");
+const todosOrder = local === null ? keys : keys !== local.split(",") ? local.split(",") : keys;
 
-export const todosOrder = local === null ? orginal : orginal !== local.split(",") ? local.split(",") : orginal;
-
-export const addTodos = ({ category }) => {
+const addTodos = (category) => {
     const modalInput = document.querySelector("#inputContent");
     const content = modalInput.value;
     if (todos[category].includes(content)) return;
@@ -23,11 +22,30 @@ export const addTodos = ({ category }) => {
     document.querySelector("#addTodo_modal").style.display = "none";
 };
 
-export const changeTodos = (first, second) => {
+const changeTodos = (first, second) => {
     const idxF = todosOrder.indexOf(first);
     const idxS = todosOrder.indexOf(second);
     todosOrder[idxF] = second;
     todosOrder[idxS] = first; 
+};
+
+const changeCheckedTodos = (dataset) => {
+    if (checkedTodos.includes(dataset.content)) {
+        const idx = checkedTodos.indexOf(dataset.content)
+        if (idx > -1) checkedTodos.splice(idx, 1)
+    } else {
+        checkedTodos.push(dataset.content);
+    }
+};
+
+const todoState = {
+    todos,
+    keys,
+    checkedTodos,
+    todosOrder,
+    addTodos,
+    changeTodos,
+    changeCheckedTodos,
 }
 
-export default todos;
+export default todoState;
