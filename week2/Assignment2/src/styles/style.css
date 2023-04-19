@@ -1,7 +1,7 @@
 /* GLOBAL */
 @font-face {
   font-family: 'omyu';
-  src: url('../font/오뮤_다예쁨체.ttf');
+  src: url('../assets/font/오뮤_다예쁨체.ttf');
   font-weight: normal;
 }
 * {
