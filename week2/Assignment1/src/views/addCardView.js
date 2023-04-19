@@ -5,7 +5,7 @@ const AddCardView = () => {
         <form method="get" enctype="multipart/form-data" action="/">
             <div class="input_wrapper">
                 <label for="title">제목</label>
-                <input type="text" id="title" name="title" />
+                <input type="text" id="title" name="title" autofocus />
             </div>
             <div class="input_wrapper">
                 <label for="tagList">해시태그(,로 구분)</label>

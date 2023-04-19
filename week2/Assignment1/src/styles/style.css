@@ -260,15 +260,21 @@ nav #type_wrapper article input {
   align-items: center;
   z-index: 1000;
 }
+#addCard_wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 #addCard_wrapper form {
   width: 40vw;
   height: 60vh;
+  padding-top: 40px;
   border-radius: 20px;
   background-color: #364b5f;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 30px;
 }
 #addCard_wrapper form .input_wrapper {
@@ -276,8 +282,29 @@ nav #type_wrapper article input {
   display: flex;
   justify-content: space-between;
 }
+#addCard_wrapper form .input_wrapper label {
+  font-size: 1.5rem;
+}
+#addCard_wrapper form .input_wrapper input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #0db56a;
+}
+#addCard_wrapper form .input_wrapper input[type="file"] {
+  border-bottom: none;
+}
+#addCard_wrapper form #submit {
+  bottom: 10px;
+  font-size: 1.5rem;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #68dca7;
+  position: absolute;
+}
 #addCard_wrapper form img {
-  max-width: 200px;
+  max-width: 100px;
 }
 
 /* CUSTOM STYLES */ 
