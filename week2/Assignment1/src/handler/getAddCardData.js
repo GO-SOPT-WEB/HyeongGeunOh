@@ -1,5 +1,5 @@
 import song from "../constants/song";
-import SongCards from "../pages/songCard";
+import SongCards from "../components/songCard";
 
 const getData = () => {
     const title = localStorage.getItem('title');

@@ -1,5 +1,5 @@
-import MainPage from "./pages/main.js";
-import AddCardPage from "./pages/addCard.js";
+import MainPage from "./pages/mainPage.js";
+import AddCardPage from "./pages/addCardPage.js";
 
 export const BASE_URL = "http://localhost:5174";
 const ROUTE_LIST = [{ path: "/", element: MainPage }, { path: "/addCard", element: AddCardPage }];

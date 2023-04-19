@@ -1,4 +1,4 @@
-import { renderSongCards, renderTagButton, renderTagCheckBox } from "../pages/renderFunction";
+import { renderSongCards, renderTagButton, renderTagCheckBox } from "../components/renderFunction";
 import checkedTagState from "../constants/songTags";
 
 export const tagClickHandler = ({ checked, id }) => {

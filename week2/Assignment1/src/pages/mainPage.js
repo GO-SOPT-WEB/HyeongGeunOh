@@ -8,7 +8,7 @@ import {
   renderSongCards,
   renderTagButton,
   renderMainStatic,
-} from "./renderFunction";
+} from "../components/renderFunction";
 import getData from "../handler/getAddCardData";
 
 function MainPage($container) {
