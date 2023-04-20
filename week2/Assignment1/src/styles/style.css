@@ -286,6 +286,7 @@ nav #type_wrapper article input {
   font-size: 1.5rem;
 }
 #addCard_wrapper form .input_wrapper input {
+  color: white;
   border: none;
   background: none;
   border-bottom: 1px solid #0db56a;

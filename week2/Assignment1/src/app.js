@@ -1,7 +1,7 @@
 import MainPage from "./pages/mainPage.js";
 import AddCardPage from "./pages/addCardPage.js";
 
-export const BASE_URL = "http://localhost:5174";
+export const BASE_URL = "https://geun-oh.github.io/geunoh.github.io/week2/assign1/";
 const ROUTE_LIST = [{ path: "/", element: MainPage }, { path: "/addCard", element: AddCardPage }];
 
 function App($container) {
