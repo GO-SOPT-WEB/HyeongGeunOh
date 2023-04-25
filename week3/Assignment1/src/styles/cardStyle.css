@@ -1,0 +1,36 @@
+.card {
+  position: relative;
+  transform: rotateY(0deg);
+  transition-duration: 1s;
+  transform-style: preserve-3d;
+}
+.card .card_frontface {
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.card .card_frontface img {
+  width: 150px;
+  backface-visibility: hidden;
+}
+.card .card_backface {
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #a11818;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
