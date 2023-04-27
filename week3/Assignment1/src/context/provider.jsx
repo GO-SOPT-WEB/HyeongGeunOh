@@ -14,6 +14,7 @@ export const ContextProvider = ({ children }) => {
         clearCorrectCard: () => dispatch({ type: 'CLEAR_CORRECTCARD' }),
         setDifficulty: (value) => dispatch({ type: 'SET_DIFFICULTY', value }),
         setRandomArray: (value) => dispatch({ type: 'SET_RANDOMARRAY', value }),
+        setSuccessModalOpen: () => dispatch({ type: 'SET_SUCCESSMODALOPEN' }),
       }}>
       {children}
     </Context.Provider>

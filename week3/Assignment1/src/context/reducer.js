@@ -5,12 +5,14 @@ export const initialContext = {
   correctCard: [],
   difficulty: 'Easy',
   randomArray: [],
+  successModalOpen: false,
   addOpenCard: () => {},
   clearOpenCard: () => {},
   addCorrectCard: () => {},
   clearCorrectCard: () => {},
   setDifficulty: () => {},
   setRandomArray: () => {},
+  setSuccessModalOpen: () => {},
 };
 
 export const Context = createContext(initialContext);
@@ -57,6 +59,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         randomArray: action.value,
+      };
+    case 'SET_SUCCESSMODALOPEN':
+      return {
+        ...state,
+        successModalOpen: !state.successModalOpen,
       };
     default:
       return state;

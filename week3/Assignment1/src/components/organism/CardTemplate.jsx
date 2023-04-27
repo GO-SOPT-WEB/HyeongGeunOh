@@ -6,13 +6,21 @@ import { getRandomIndexArray } from '../../utils/getRandomIndexArray';
 import Card from '../Card';
 
 const CardTemplate = () => {
-  const { difficulty, openCard, correctCard, randomArray, addCorrectCard, clearOpenCard, setRandomArray } =
-    useGlobalContext();
+  const {
+    difficulty,
+    openCard,
+    correctCard,
+    randomArray,
+    addCorrectCard,
+    clearOpenCard,
+    setRandomArray,
+    setSuccessModalOpen,
+  } = useGlobalContext();
   const perfectScore = difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9;
 
   useEffect(() => {
     if (correctCard.length === perfectScore) {
-      console.log('게임 성공!!');
+      setSuccessModalOpen();
       return;
     }
     if (openCard.length === 2) {
