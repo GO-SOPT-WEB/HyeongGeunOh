@@ -8,6 +8,16 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      BRANCH:
+        description: 'Branch to use'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+        - main
+        - develop
+
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
