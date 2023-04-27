@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 import { useGlobalContext } from '../context/reducer';
 import Button from './atom/Button';
 import CardTemplate from './organism/CardTemplate';
@@ -12,46 +14,46 @@ const GameSection = () => {
   };
 
   return (
-    <section className="gameSection_wrapper" style={gameSectionStyle}>
-      <div className="difficultyButton_wrapper" style={difficultyButtonWrapperStyle}>
+    <StyledGameSection className="gameSection_wrapper">
+      <DifficulyButtonWrapper className="difficultyButton_wrapper">
         <Button type="difficulty" innerText="Easy" onClick={(e) => difficultyHandler(e)} />
         <Button type="difficulty" innerText="Normal" onClick={(e) => difficultyHandler(e)} />
         <Button type="difficulty" innerText="Hard" onClick={(e) => difficultyHandler(e)} />
-      </div>
-      <main style={cardWrapperStyle}>
+      </DifficulyButtonWrapper>
+      <CardWrapper>
         <CardTemplate />
-      </main>
-    </section>
+      </CardWrapper>
+    </StyledGameSection>
   );
 };
 
-const gameSectionStyle = {
-  width: '100vw',
-  height: 'auto',
-  minHeight: 'calc(100vh - 200px)',
-  backgroundColor: '#F1C85E',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
+const StyledGameSection = styled.section`
+  width: 100vw;
+  height: auto;
+  min-height: calc(100vw - 200px);
+  background-color: ${({ theme }) => theme.Background};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-const difficultyButtonWrapperStyle = {
-  width: '60%',
-  marginTop: '20px',
-  marginBottom: '20px',
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '30px',
-};
+const DifficulyButtonWrapper = styled.div`
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+`;
 
-const cardWrapperStyle = {
-  width: '60%',
-  display: 'flex',
-  flexFlow: 'row wrap',
-  justifyContent: 'center',
-  alignItems: 'center',
-  perspective: '1200px',
-  gap: '20px',
-};
+const CardWrapper = styled.main`
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  gap: 20px;
+`;
 
 export default GameSection;

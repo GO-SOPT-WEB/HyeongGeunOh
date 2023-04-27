@@ -1,44 +1,48 @@
+import styled from 'styled-components';
+
 const Button = ({ type, innerText, onClick }) => {
   switch (type) {
     case 'difficulty':
       return (
-        <button type="button" onClick={onClick} value={innerText} style={difficultyButtonStyle}>
+        <DifficulfyButton type="button" onClick={onClick} value={innerText}>
           {innerText}
-        </button>
+        </DifficulfyButton>
       );
     case 'reset':
       return (
-        <button type="button" onClick={onClick} style={resetButtonStyle}>
+        <ResetButton type="button" onClick={onClick}>
           {innerText}
-        </button>
+        </ResetButton>
       );
   }
 };
 
-const difficultyButtonStyle = {
-  height: '60px',
-  padding: '10px 20px',
-  fontSize: '1.5rem',
-  border: 'none',
-  borderRadius: '5px',
-  backgroundColor: '#D37E75',
-  color: '#6B2019',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
+const DifficulfyButton = styled.button`
+  height: 60px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #6b2019;
+  background-color: #d37e75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const resetButtonStyle = {
-  top: '60px',
-  right: '40px',
-  height: '90px',
-  fontSize: '2rem',
-  color: '#F1C4C0',
-  backgroundColor: '#6B2019',
-  position: 'fixed',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
+const ResetButton = styled.button`
+  top: 60px;
+  right: 40px;
+  height: 90px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  color: #f1c4c0;
+  background-color: #6b2019;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export default Button;

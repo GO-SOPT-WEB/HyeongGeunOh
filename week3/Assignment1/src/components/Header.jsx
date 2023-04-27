@@ -1,38 +1,38 @@
+import styled from 'styled-components';
+
 import { useGlobalContext } from '../context/reducer';
 
 const Header = () => {
   const { correctCard, difficulty } = useGlobalContext();
 
   return (
-    <header style={headerStyle}>
-      <h1 style={titleStyle}>!찌호를 맞춰주세요!</h1>
-      <span style={title_spanStyle}>
+    <StyleHeader>
+      <h1>!찌호를 맞춰주세요!</h1>
+      <span>
         {correctCard.length} / {difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9}
       </span>
-    </header>
+    </StyleHeader>
   );
 };
 
-const headerStyle = {
-  width: '100vw',
-  height: '200px',
-  backgroundColor: '#EBCCB0',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
-
-const titleStyle = {
-  color: '#815854',
-  fontSize: '4rem',
-  marginBottom: '1rem',
-};
-
-const title_spanStyle = {
-  color: '#6B3A35',
-  fontSize: '2rem',
-  fontWeight: 700,
-};
+const StyleHeader = styled.header`
+  width: 100vw;
+  height: 200px;
+  background-color: #ebccb0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #815854;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  span {
+    color: #6b3a35;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+`;
 
 export default Header;
