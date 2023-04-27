@@ -48,7 +48,7 @@ export const reducer = (state, action) => {
     case 'CLEAR_CORRECTCARD':
       return {
         ...state,
-        clearCard: [],
+        correctCard: [],
       };
     case 'SET_DIFFICULTY':
       return {

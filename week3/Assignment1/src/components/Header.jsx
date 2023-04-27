@@ -1,14 +1,26 @@
+import '../styles/cardStyle.css';
+
+import { useEffect } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 import { useGlobalContext } from '../context/reducer';
 
 const Header = () => {
   const { correctCard, difficulty } = useGlobalContext();
+  const spanRef = useRef();
+
+  useEffect(() => {
+    spanRef.current.classList.add('bright');
+    setTimeout(() => {
+      spanRef.current.classList.remove('bright');
+    }, 800);
+  }, [correctCard]);
 
   return (
     <StyleHeader>
       <h1>!찌호를 맞춰주세요!</h1>
-      <span>
+      <span ref={spanRef}>
         {correctCard.length} / {difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9}
       </span>
     </StyleHeader>

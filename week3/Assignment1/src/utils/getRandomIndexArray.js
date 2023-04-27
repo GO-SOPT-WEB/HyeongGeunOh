@@ -1,6 +1,6 @@
 export const getRandomIndexArray = (difficulty) => {
   const hardArr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9];
-  const normalArr = hardArr.slice(0, 13);
+  const normalArr = hardArr.slice(0, 14);
   const easyArr = hardArr.slice(0, 10);
 
   const shuffle = (array) => {
