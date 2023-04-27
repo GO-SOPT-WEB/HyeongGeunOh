@@ -13,6 +13,7 @@ export const ContextProvider = ({ children }) => {
         clearOpenCard: () => dispatch({ type: 'CLEAR_OPENCARD' }),
         clearCorrectCard: () => dispatch({ type: 'CLEAR_CORRECTCARD' }),
         setDifficulty: (value) => dispatch({ type: 'SET_DIFFICULTY', value }),
+        setRandomArray: (value) => dispatch({ type: 'SET_RANDOMARRAY', value }),
       }}>
       {children}
     </Context.Provider>

@@ -4,11 +4,13 @@ export const initialContext = {
   openCard: [],
   correctCard: [],
   difficulty: 'Easy',
+  randomArray: [],
   addOpenCard: () => {},
   clearOpenCard: () => {},
   addCorrectCard: () => {},
   clearCorrectCard: () => {},
   setDifficulty: () => {},
+  setRandomArray: () => {},
 };
 
 export const Context = createContext(initialContext);
@@ -50,6 +52,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         difficulty: action.value,
+      };
+    case 'SET_RANDOMARRAY':
+      return {
+        ...state,
+        randomArray: action.value,
       };
     default:
       return state;
