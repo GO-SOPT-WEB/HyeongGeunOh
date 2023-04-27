@@ -4,10 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches:
-      - week3/assign1
-    paths:
-      - "week3/Assignment1"
+    branches: ['week3/assign1']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,37 +22,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: "week3/Assignment1"
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
-      - name: npm install
-        run: npm install
-
-      - name: build
-        run: npm run build
   # Single deploy job since we're just deploying
   deploy:
-    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "week3/Assignment1"
-
+        working-directory: 'week3/Assignment1'
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -65,7 +41,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: "./dist"
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
