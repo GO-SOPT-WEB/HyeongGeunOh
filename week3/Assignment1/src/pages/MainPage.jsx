@@ -1,13 +1,26 @@
+import Button from '../components/atom/Button';
 import GameSection from '../components/GameSection';
 import Header from '../components/Header';
-import { ContextProvider } from '../context/provider';
+import { useGlobalContext } from '../context/reducer';
+import { getRandomIndexArray } from '../utils/getRandomIndexArray';
 
 const MainPage = () => {
+  const { difficulty, clearCorrectCard, clearOpenCard, setRandomArray } = useGlobalContext();
+
   return (
-    <ContextProvider>
+    <>
       <Header />
       <GameSection />
-    </ContextProvider>
+      <Button
+        type="reset"
+        onClick={() => {
+          clearCorrectCard();
+          clearOpenCard();
+          setRandomArray(getRandomIndexArray(difficulty));
+        }}
+        innerText="RESET"
+      />
+    </>
   );
 };
 

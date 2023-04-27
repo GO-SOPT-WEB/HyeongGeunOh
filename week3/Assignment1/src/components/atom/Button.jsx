@@ -35,7 +35,7 @@ const resetButtonStyle = {
   fontSize: '2rem',
   color: '#F1C4C0',
   backgroundColor: '#6B2019',
-  position: 'absolute',
+  position: 'fixed',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

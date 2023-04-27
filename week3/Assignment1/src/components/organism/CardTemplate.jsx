@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import ImgChunks from '../../assets';
 import { useGlobalContext } from '../../context/reducer';
@@ -6,8 +6,8 @@ import { getRandomIndexArray } from '../../utils/getRandomIndexArray';
 import Card from '../Card';
 
 const CardTemplate = () => {
-  const { difficulty, openCard, correctCard, addCorrectCard, clearOpenCard } = useGlobalContext();
-  const [randomArray, setRandomArray] = useState([]);
+  const { difficulty, openCard, correctCard, randomArray, addCorrectCard, clearOpenCard, setRandomArray } =
+    useGlobalContext();
   const perfectScore = difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9;
 
   useEffect(() => {
