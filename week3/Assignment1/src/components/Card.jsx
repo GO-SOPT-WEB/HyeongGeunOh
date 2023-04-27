@@ -7,7 +7,7 @@ const Card = ({ imgURL, index }) => {
   const { openCard, correctCard, addOpenCard } = useGlobalContext();
   const format = { url, index };
   const buttonOnclick = () => {
-    if (openCard.some((x) => x.index === index) || openCard.length === 2) return;
+    if (correctCard.includes(url) || openCard.some((x) => x.index === index) || openCard.length === 2) return;
     addOpenCard(format);
   };
 
