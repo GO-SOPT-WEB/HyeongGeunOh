@@ -1,38 +1,25 @@
+import { useGlobalContext } from '../context/reducer';
 import Button from './atom/Button';
 import CardTemplate from './organism/CardTemplate';
 
-const GameSection = ({ difficulty }) => {
-  const hardArr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9];
-  const normalArr = hardArr.slice(0, 13);
-  const easyArr = hardArr.slice(0, 10);
+const GameSection = () => {
+  const { setDifficulty, clearOpenCard, clearCorrectCard } = useGlobalContext();
 
-  const shuffle = (array) => {
-    array.sort(() => Math.random() - 0.5);
-    return array;
-  };
-
-  const getArray = () => {
-    switch (difficulty) {
-      case 'Easy':
-        return shuffle(easyArr);
-      case 'Normal':
-        return shuffle(normalArr);
-      case 'Hard':
-        return shuffle(hardArr);
-      default:
-        return [];
-    }
+  const difficultyHandler = (e) => {
+    setDifficulty(e.target.value);
+    clearOpenCard();
+    clearCorrectCard();
   };
 
   return (
     <section className="gameSection_wrapper" style={gameSectionStyle}>
       <div className="difficultyButton_wrapper" style={difficultyButtonWrapperStyle}>
-        <Button type="difficulty" innerText="Easy" onClick={(e) => console.log(e.target)} />
-        <Button type="difficulty" innerText="Normal" onClick={(e) => console.log(e.target)} />
-        <Button type="difficulty" innerText="Hard" onClick={(e) => console.log(e.target)} />
+        <Button type="difficulty" innerText="Easy" onClick={(e) => difficultyHandler(e)} />
+        <Button type="difficulty" innerText="Normal" onClick={(e) => difficultyHandler(e)} />
+        <Button type="difficulty" innerText="Hard" onClick={(e) => difficultyHandler(e)} />
       </div>
       <main style={cardWrapperStyle}>
-        <CardTemplate array={getArray()} />
+        <CardTemplate />
       </main>
     </section>
   );

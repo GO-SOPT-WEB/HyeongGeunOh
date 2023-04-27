@@ -11,8 +11,8 @@ export const ContextProvider = ({ children }) => {
         addOpenCard: (value) => dispatch({ type: 'ADD_OPENCARD', value }),
         addCorrectCard: (value) => dispatch({ type: 'ADD_CORRECTCARD', value }),
         clearOpenCard: () => dispatch({ type: 'CLEAR_OPENCARD' }),
-        plusScore: () => dispatch({ type: 'PLUS_SCORE' }),
-        clearScore: () => dispatch({ type: 'CLEAR_SCORE' }),
+        clearCorrectCard: () => dispatch({ type: 'CLEAR_CORRECTCARD' }),
+        setDifficulty: (value) => dispatch({ type: 'SET_DIFFICULTY', value }),
       }}>
       {children}
     </Context.Provider>

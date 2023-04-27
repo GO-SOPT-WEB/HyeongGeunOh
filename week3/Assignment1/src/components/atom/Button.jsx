@@ -2,7 +2,7 @@ const Button = ({ type, innerText, onClick }) => {
   switch (type) {
     case 'difficulty':
       return (
-        <button type="button" onClick={onClick} style={difficultyButtonStyle}>
+        <button type="button" onClick={onClick} value={innerText} style={difficultyButtonStyle}>
           {innerText}
         </button>
       );

@@ -5,8 +5,8 @@ import { ContextProvider } from '../context/provider';
 const MainPage = () => {
   return (
     <ContextProvider>
-      <Header correct={0} difficulty={9} />
-      <GameSection difficulty="Easy" />
+      <Header />
+      <GameSection />
     </ContextProvider>
   );
 };

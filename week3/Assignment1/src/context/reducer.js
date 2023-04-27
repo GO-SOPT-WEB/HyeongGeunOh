@@ -4,12 +4,11 @@ export const initialContext = {
   openCard: [],
   correctCard: [],
   difficulty: 'Easy',
-  score: 0,
   addOpenCard: () => {},
   clearOpenCard: () => {},
   addCorrectCard: () => {},
-  plusScore: () => {},
-  clearScore: () => {},
+  clearCorrectCard: () => {},
+  setDifficulty: () => {},
 };
 
 export const Context = createContext(initialContext);
@@ -40,17 +39,17 @@ export const reducer = (state, action) => {
     case 'ADD_CORRECTCARD':
       return {
         ...state,
-        correctCard: [...state.openCard, action.value],
+        correctCard: [...state.correctCard, action.value],
       };
-    case 'PLUS_SCORE':
+    case 'CLEAR_CORRECTCARD':
       return {
         ...state,
-        score: state.score + 1,
+        clearCard: [],
       };
-    case 'CLEAR_SCORE':
+    case 'SET_DIFFICULTY':
       return {
         ...state,
-        score: 0,
+        difficulty: action.value,
       };
     default:
       return state;

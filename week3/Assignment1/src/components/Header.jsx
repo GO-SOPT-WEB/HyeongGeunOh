@@ -1,9 +1,13 @@
-const Header = ({ correct, difficulty }) => {
+import { useGlobalContext } from '../context/reducer';
+
+const Header = () => {
+  const { correctCard, difficulty } = useGlobalContext();
+
   return (
     <header style={headerStyle}>
       <h1 style={titleStyle}>!찌호를 맞춰주세요!</h1>
       <span style={title_spanStyle}>
-        {correct} / {difficulty}
+        {correctCard.length} / {difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9}
       </span>
     </header>
   );
