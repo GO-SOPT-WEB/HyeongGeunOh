@@ -1,7 +1,7 @@
 import ReactDom from 'react-dom';
 
-const Modal = ({ children }) => {
+const ModalRenderer = ({ children }) => {
   return ReactDom.createPortal(children, document.querySelector('#modal'));
 };
 
-export default Modal;
+export default ModalRenderer;

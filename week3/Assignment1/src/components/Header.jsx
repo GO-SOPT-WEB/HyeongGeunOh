@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 import { useGlobalContext } from '../context/reducer';
 
-// 잔디 테스트 1
 const Header = () => {
   const { correctCard, difficulty } = useGlobalContext();
   const spanRef = useRef();

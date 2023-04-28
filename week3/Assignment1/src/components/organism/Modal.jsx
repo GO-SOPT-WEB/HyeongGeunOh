@@ -1,30 +1,19 @@
 import styled from 'styled-components';
 
-import { useGlobalContext } from '../../context/reducer';
+import ResetButton from './ResetButton';
 
-const SuccessModal = () => {
-  const { clearCorrectCard, clearOpenCard, setSuccessModalOpen } = useGlobalContext();
-
+const Modal = () => {
   return (
     <StyledSuccessModal>
       <article>
         <h1>성공!!!</h1>
-        <button
-          type="button"
-          value="게임으로 돌아가기"
-          onClick={() => {
-            setSuccessModalOpen();
-            clearCorrectCard();
-            clearOpenCard();
-          }}>
-          게임으로 돌아가기!
-        </button>
+        <ResetButton />
       </article>
     </StyledSuccessModal>
   );
 };
 
-export default SuccessModal;
+export default Modal;
 
 const StyledSuccessModal = styled.section`
   width: 100vw;
