@@ -34,6 +34,7 @@ const ResetButton = styled.button`
   top: 60px;
   right: 40px;
   height: 90px;
+  padding: 10px 20px;
   font-size: 2rem;
   border: none;
   border-radius: 5px;

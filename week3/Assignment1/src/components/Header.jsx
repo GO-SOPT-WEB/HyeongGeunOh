@@ -1,4 +1,4 @@
-import '../styles/cardStyle.css';
+import '../styles/bright.css';
 
 import { useEffect } from 'react';
 import { useRef } from 'react';

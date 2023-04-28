@@ -39,16 +39,30 @@ const StyledSuccessModal = styled.section`
   article {
     width: 300px;
     height: 200px;
-    background-color: beige;
+    border-radius: 20px;
+    box-shadow: ${({ theme }) => theme.BoxShadow};
+    background-color: ${({ theme }) => theme.Background};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     h1 {
       font-size: 3rem;
+      color: ${({ theme }) => theme.Text};
     }
     button {
-      background-color: white;
+      width: 80px;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: ${({ theme }) => theme.BoxShadow};
+      background-color: ${({ theme }) => theme.SubBackground};
+      transition-duration: 0.3s;
+      :hover {
+        color: white;
+        background-color: ${({ theme }) => theme.Text};
+      }
     }
   }
 `;
