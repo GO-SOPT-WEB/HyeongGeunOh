@@ -23,7 +23,7 @@ const StyledResetButton = styled.button`
   border-radius: 5px;
   color: #f1c4c0;
   background-color: #6b2019;
-  position: fixed;
+  poistion: fixed;
   display: flex;
   justify-content: center;
   align-items: center;

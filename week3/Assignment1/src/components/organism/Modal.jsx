@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import ResetButton from './ResetButton';
+import SuccessModalButton from './SuccessModalButton';
 
 const Modal = () => {
   return (
     <StyledSuccessModal>
       <article>
         <h1>성공!!!</h1>
-        <ResetButton />
+        <SuccessModalButton />
       </article>
     </StyledSuccessModal>
   );
