@@ -11,6 +11,11 @@ const StyledDifficulfyButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.3s;
+  :hover {
+    color: white;
+    background-color: ${({ theme }) => theme.Text};
+  }
 `;
 
 const StyledResetButton = styled.button`
@@ -23,10 +28,15 @@ const StyledResetButton = styled.button`
   border-radius: 5px;
   color: #f1c4c0;
   background-color: #6b2019;
-  poistion: fixed;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.3s;
+  :hover {
+    color: white;
+    background-color: ${({ theme }) => theme.Text};
+  }
 `;
 
 const StyledSuccessModalButton = styled.button`
