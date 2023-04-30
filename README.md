@@ -12,5 +12,7 @@
 | 2주차 | Keshi's songs(Advanced) | [ [ 2주차 기본/심화 과제 ] 2주차 1번 과제 제출 ](https://github.com/GO-SOPT-WEB/HyeongGeunOh/pull/2)|
 | 2주차 | Todo mate(Advanced) |[ [ 2주차 기본/심화 과제 ] 2주차 2번 과제 제출 ](https://github.com/GO-SOPT-WEB/HyeongGeunOh/pull/3)|
 | 2주차 |  📚 Frontend Design Pattern   | [ [ 2주차 생각 과제 ] 2주차 생각 과제 제출 ](https://github.com/GO-SOPT-WEB/HyeongGeunOh/pull/4)|
+| 3주차 |  찌호를 찾아주세요   | [ [ 3주차 기본/심화 과제 ] 3주차 과제 제출 ](https://github.com/GO-SOPT-WEB/HyeongGeunOh/pull/5)|
+| 2주차 |  React 상태 관리와 렌더링 로직  | |
 
 </div>
