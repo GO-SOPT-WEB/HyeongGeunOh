@@ -50,7 +50,7 @@ const CardTemplate = () => {
 export default CardTemplate;
 
 const StyledCardWrapper = styled.main`
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
