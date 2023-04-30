@@ -18,16 +18,16 @@ const Header = () => {
   }, [correctCard]);
 
   return (
-    <StyleHeader>
-      <h1>!찌호를 맞춰주세요!</h1>
+    <StyledHeader>
+      <h1>⭐찌호를 맞춰주세요⭐</h1>
       <span ref={spanRef}>
         {correctCard.length} / {difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9}
       </span>
-    </StyleHeader>
+    </StyledHeader>
   );
 };
 
-const StyleHeader = styled.header`
+const StyledHeader = styled.header`
   width: 100vw;
   height: 200px;
   background-color: #ebccb0;
