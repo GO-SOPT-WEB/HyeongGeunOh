@@ -18,19 +18,54 @@ const SearchInputForm = () => {
             <option value="weekly">주간</option>
         </select>
         <input type="text" id="area" name="area" value={area} onChange={(e) => setArea(e.target.value)} />
-        <button type="button" value="검색하기" onClick={onClick} />
+        <button type="button" value="검색하기" onClick={onClick}>검색하기</button>
     </St.SearchInputForm>
 }
 
 const St = {
     SearchInputForm: styled.article`
         width: 100vw;
-        height: 150px;
+        height: 120px;
+        background-color: #00B1D270;
 
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
+
+        select, select > option {
+            font-size: 0.7rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input {
+            font-size: 0.8rem;
+
+            padding: 5px 10px;
+
+            border: none;
+            border-radius: 10px;
+        }
+
+        button {
+            font-size: 0.7rem;
+            font-weight: 600;
+
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: #00B1D2;
+
+            transition-duration: .3s;
+
+            &:hover {
+                color: #00B1D270;
+                background-color: white; 
+            }
+        }
     `
 }
 
