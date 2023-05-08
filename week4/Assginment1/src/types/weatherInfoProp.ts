@@ -18,5 +18,8 @@ export interface WeatherInfoProps {
 }
 
 export interface GetFiveDayWeatherInfoProps {
+  city: {
+    name: string;
+  }
   list: WeatherInfoProps[];
 }
