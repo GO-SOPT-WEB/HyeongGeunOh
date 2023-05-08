@@ -1,10 +1,20 @@
 import styled from "styled-components";
-import { InfoCardProps } from "../types/InfoCardProps";
 
-const InfoCard = ({ imgUrl, temp, feels_like, temp_min, temp_max, clouds_all }: InfoCardProps) => {
+interface InfoCardProps {
+    date: string;
+    imgUrl?: string;
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    clouds_all: number;
+}
+
+const InfoCard = ({ date, imgUrl, temp, feels_like, temp_min, temp_max, clouds_all }: InfoCardProps) => {
     return (
         <St.InfoCardWrapper>
-            <img src={imgUrl} alt={imgUrl} />
+            <p>{date}</p>
+            {imgUrl ? <img src={imgUrl} alt={imgUrl} /> : <div>NO IMG to RENDER...</div>}
             <p>{temp}</p>
             <p>{temp_max}</p>
             <p>{temp_min}</p>
@@ -18,14 +28,26 @@ const St = {
     InfoCardWrapper: styled.article`
         width: 210px;
         height: 400px;
-        padding: 10px;
-        background-color: lightblue;
+        padding: 20px;
+
+        border-radius: 20px;
+        background-color: #00B1D2;
+
         display: flex;
         flex-direction: column;
         align-items: center;
+
         img {
             width: 150px;
         }
+    `,
+    ThereIsNoImg: styled.div`
+        width: 150px;
+        height: 150px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     `
 }
 
