@@ -13,12 +13,8 @@ const useGetWeatherInfo = (type: string, area: string) => {
 
   const url =
     type === "weekly"
-      ? `https://api.openweathermap.org/data/2.5/forecast?q=${area}&appid=${
-          import.meta.env.VITE_APP_WEATHER
-        }&units=metric`
-      : `https://api.openweathermap.org/data/2.5/weather?q=${area}&appid=${
-          import.meta.env.VITE_APP_WEATHER
-        }&units=metric`;
+      ? `https://api.openweathermap.org/data/2.5/forecast?q=${area}&appid=${import.meta.env.VITE_APP_WEATHER}&units=metric`
+      : `https://api.openweathermap.org/data/2.5/weather?q=${area}&appid=${import.meta.env.VITE_APP_WEATHER}&units=metric`;
 
   const getWeatherInfo = async () => {
     setIsLoading(true);
@@ -26,7 +22,7 @@ const useGetWeatherInfo = (type: string, area: string) => {
       axios
         .get(url)
         .then((res) => {
-          type === 'daily' ? setDailyData(res.data) : setWeeklyData(res.data)
+          type === "daily" ? setDailyData(res.data) : setWeeklyData(res.data);
         })
         .finally(() => {
           setIsLoading(false);
