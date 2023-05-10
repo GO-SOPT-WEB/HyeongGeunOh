@@ -4,10 +4,14 @@ import InfoCard from "./InfoCard";
 import { WEATHER_TYPE } from "../constants/weather";
 import { styled } from "styled-components";
 import Shimmer from "./Shimmer";
+import Error404 from "./Error404";
 
 const InfoCardSection = () => {
     const { type, area } = useParams();
     const { dailyData, weeklyData, isError, isLoading, error } = useGetWeatherInfo(type!, area!);
+
+    if (area === '') return <Error404 error="지역명을 다시 한 번 입력해주세요!!" />;
+
     if (isLoading) {
         return (
             <St.InfoCardSectionWrapper>
@@ -20,12 +24,11 @@ const InfoCardSection = () => {
     }
 
     if (isError) {
-        return <span>{String(error)}</span>
+        return <Error404 error={String(error)} />
     }
 
     if (dailyData) {
         const imgUrl = WEATHER_TYPE.find(x => x.description === dailyData.weather[0].description)
-        console.log(dailyData)
         const getDate = new Date();
         const nowMonth = getDate.getMonth() < 10 ? '0' + (getDate.getMonth() + 1) : (getDate.getMonth() + 1)
         const nowDate = getDate.getDate() < 10 ? '0' + getDate.getDate() : getDate.getDate()
@@ -37,8 +40,7 @@ const InfoCardSection = () => {
                 </St.InfoCardWrapper>
             </St.InfoCardSectionWrapper>
         )
-    } else {
-        console.log(weeklyData)
+    } else if (weeklyData) {
         const newData = weeklyData?.list.filter(x => x.dt_txt?.substring(11,13) === "06").splice(0, 5)
         return (
             <St.InfoCardSectionWrapper>
@@ -48,7 +50,8 @@ const InfoCardSection = () => {
                 </St.InfoCardWrapper>
             </St.InfoCardSectionWrapper>
         )
-
+    } else {
+        return <Error404 error="데이터를 불러오지 못했습니다..." />
     }
 }
 
