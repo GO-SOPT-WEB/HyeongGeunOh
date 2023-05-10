@@ -1,4 +1,4 @@
-import Header from "./pages/Header"
+import Header from "./components/template/Header"
 import Router from "./pages/Router"
 
 function App() {

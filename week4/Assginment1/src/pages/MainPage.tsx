@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import SearchInputForm from "../components/SearchInput";
+import SearchInputForm from "../components/template/SearchInputForm";
 
 const MainPage = () => {
     return <>
