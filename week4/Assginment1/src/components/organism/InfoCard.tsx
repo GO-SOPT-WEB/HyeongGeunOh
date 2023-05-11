@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import InfoText from "../atom/InfoText";
 
 interface InfoCardProps {
     date: string;
@@ -14,12 +15,11 @@ const InfoCard = ({ date, imgUrl, temp, feels_like, temp_min, temp_max, clouds_a
     return (
         <St.InfoCardWrapper>
             <p>{date}</p>
-            {imgUrl ? <img src={imgUrl} alt={imgUrl} /> : <div>NO IMG to RENDER...</div>}
-            <p>{temp}</p>
-            <p>{temp_max}</p>
-            <p>{temp_min}</p>
-            <p>{feels_like}</p>
-            <p>{clouds_all}</p>
+            {imgUrl ? <img src={imgUrl} alt={imgUrl} /> : <St.ThereIsNoImg src="/assets/no_img.png" alt="NO IMG" />}
+            <InfoText description="온도" value={temp} />
+            <InfoText description="체감 온도" value={feels_like} />
+            <InfoText description="최저/최고" value={`${temp_min}/${temp_max}`} />
+            <InfoText description="구름" value={`${clouds_all}%`} />
         </St.InfoCardWrapper>
     )
 }
@@ -36,14 +36,17 @@ const St = {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
 
         img {
             width: 150px;
         }
     `,
-    ThereIsNoImg: styled.div`
+    ThereIsNoImg: styled.img`
         width: 150px;
         height: 150px;
+
+        border-radius: 20px;
 
         display: flex;
         justify-content: center;
