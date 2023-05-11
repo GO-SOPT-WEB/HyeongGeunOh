@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import useGetWeatherInfo from "../../api/hooks/weatherInfo";
-import InfoCard from "../organism/InfoCard";
+import MemoizedInfoCard from "../organism/InfoCard";
 import { WEATHER_TYPE } from "../../constants/weather";
 import { styled } from "styled-components";
 import Error404 from "../atom/Error404";
@@ -22,7 +22,7 @@ const InfoCardSection = () => {
             <St.InfoCardSectionWrapper>
                 <p>현재 도시 : {dailyData.name}</p>
                 <St.InfoCardWrapper>
-                    {imgUrl && <InfoCard date={getMonthDate()} imgUrl={imgUrl.imgURL} temp={dailyData.main.temp} feels_like={dailyData.main.feels_like} temp_min={dailyData.main.temp_min} temp_max={dailyData.main.temp_max} clouds_all={dailyData.clouds.all} />}
+                    {imgUrl && <MemoizedInfoCard date={getMonthDate()} imgUrl={imgUrl.imgURL} temp={dailyData.main.temp} feels_like={dailyData.main.feels_like} temp_min={dailyData.main.temp_min} temp_max={dailyData.main.temp_max} clouds_all={dailyData.clouds.all} />}
                 </St.InfoCardWrapper>
             </St.InfoCardSectionWrapper>
         )
@@ -32,7 +32,7 @@ const InfoCardSection = () => {
             <St.InfoCardSectionWrapper>
                 <p>현재 도시 : {weeklyData?.city.name}</p>
                 <St.InfoCardWrapper>
-                    {newData && newData.map((data, index) => <InfoCard date={data.dt_txt!.substring(5, 10)} key={index} imgUrl={WEATHER_TYPE.find(x => x.description === data.weather[0].description) && WEATHER_TYPE.find(x => x.description === data.weather[0].description)!.imgURL} temp={data.main.temp} feels_like={data.main.feels_like} temp_min={data.main.temp_min} temp_max={data.main.temp_max} clouds_all={data.clouds.all} />)}
+                    {newData && newData.map((data, index) => <MemoizedInfoCard date={data.dt_txt!.substring(5, 10)} key={index} imgUrl={WEATHER_TYPE.find(x => x.description === data.weather[0].description) && WEATHER_TYPE.find(x => x.description === data.weather[0].description)!.imgURL} temp={data.main.temp} feels_like={data.main.feels_like} temp_min={data.main.temp_min} temp_max={data.main.temp_max} clouds_all={data.clouds.all} />)}
                 </St.InfoCardWrapper>
             </St.InfoCardSectionWrapper>
         )

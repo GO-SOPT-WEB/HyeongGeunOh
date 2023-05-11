@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import InfoText from "../atom/InfoText";
+import React from "react";
 
 interface InfoCardProps {
     date: string;
@@ -54,4 +55,6 @@ const St = {
     `
 }
 
-export default InfoCard;
+const MemoizedInfoCard = React.memo(InfoCard);
+
+export default MemoizedInfoCard;
