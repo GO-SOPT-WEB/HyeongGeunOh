@@ -1,7 +1,7 @@
 // 날씨 정보 데이터를 불러오는 비동기 로직이 직접 담겨있습니다.
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { GetFiveDayWeatherInfoProps, WeatherInfoProps } from "../../types/weatherInfoProp";
 
 const useGetWeatherInfo = (type: string, area: string) => {
@@ -16,7 +16,7 @@ const useGetWeatherInfo = (type: string, area: string) => {
       ? `https://api.openweathermap.org/data/2.5/forecast?q=${area}&appid=${import.meta.env.VITE_APP_WEATHER}&units=metric`
       : `https://api.openweathermap.org/data/2.5/weather?q=${area}&appid=${import.meta.env.VITE_APP_WEATHER}&units=metric`;
 
-  const getWeatherInfo = async () => {
+  const getWeatherInfo = useCallback(async () => {
     setIsLoading(true);
     try {
       axios
@@ -31,7 +31,7 @@ const useGetWeatherInfo = (type: string, area: string) => {
       setIsError(true);
       setError(err);
     }
-  };
+  }, [url]) ;
 
   useEffect(() => {
     setDailyData(undefined);
