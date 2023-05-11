@@ -10,6 +10,7 @@ const St = {
 
         width: 100vw;
         height: 100px;
+        
         background-color: #FDDB27;
 
         display: flex;
