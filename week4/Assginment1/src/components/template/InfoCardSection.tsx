@@ -12,8 +12,6 @@ const InfoCardSection = () => {
     const { type, area } = useParams();
     const { dailyData, weeklyData, isError, isLoading, error } = useGetWeatherInfo(type!, area!);
 
-    if (area === '') return <Error404 error="지역명을 정확히 입력해주세요!!" />;
-
     if (isLoading) return type === 'daily' ? <DailyShimmer /> : <WeeklyShimmer />;
 
     if (isError) return <Error404 error={String(error)} />;
