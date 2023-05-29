@@ -1,19 +1,20 @@
-import '../styles/bright.css';
+import "../styles/bright.css";
 
-import { useEffect } from 'react';
-import { useRef } from 'react';
-import styled from 'styled-components';
+import { useEffect } from "react";
+import { useRef } from "react";
+import styled from "styled-components";
 
-import { useGlobalContext } from '../context/reducer';
+import { useRecoilValue } from "recoil";
+import RootState from "../recoil/atom";
 
 const Header = () => {
-  const { correctCard, difficulty } = useGlobalContext();
-  const spanRef = useRef();
+  const { correctCard, difficulty } = useRecoilValue(RootState);
+  const spanRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    spanRef.current.classList.add('bright');
+    spanRef.current && spanRef.current.classList.add("bright");
     setTimeout(() => {
-      spanRef.current.classList.remove('bright');
+      spanRef.current && spanRef.current.classList.remove("bright");
     }, 800);
   }, [correctCard]);
 
@@ -21,7 +22,8 @@ const Header = () => {
     <StyledHeader>
       <h1>⭐찌호를 맞춰주세요⭐</h1>
       <span ref={spanRef}>
-        {correctCard.length} / {difficulty === 'Easy' ? 5 : difficulty === 'Normal' ? 7 : 9}
+        {correctCard.length} /{" "}
+        {difficulty === "Easy" ? 5 : difficulty === "Normal" ? 7 : 9}
       </span>
     </StyledHeader>
   );

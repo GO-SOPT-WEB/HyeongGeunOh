@@ -1,8 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const CardView = ({ rotate, onClick, imgURL }) => {
+interface CardViewProps {
+  rotate: "rotateY(0deg)" | "rotateY(180deg)";
+  onClick: (e: React.MouseEvent<HTMLElement>) => void;
+  imgURL: string;
+}
+
+const CardView = ({ rotate, onClick, imgURL }: CardViewProps) => {
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <StyledCardArticle rotate={rotate} onClick={onClick}>
       <div className="card_frontface">
         <img src={imgURL} alt={`찌호이미지: ${imgURL}`} />
@@ -12,7 +17,9 @@ const CardView = ({ rotate, onClick, imgURL }) => {
   );
 };
 
-const StyledCardArticle = styled.article`
+const StyledCardArticle = styled.article<{
+  rotate: "rotateY(0deg)" | "rotateY(180deg)";
+}>`
   position: relative;
   transform: ${({ rotate }) => rotate};
   transition-duration: 1s;

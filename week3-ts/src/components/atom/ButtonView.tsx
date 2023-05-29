@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledDifficulfyButton = styled.button`
   ${({ theme }) => theme.CommonButtonStyle}
@@ -39,7 +39,13 @@ const buttonTypes = {
   SUCCESSMODAL: StyledSuccessModalButton,
 };
 
-const ButtonView = ({ type, innerText, onClick }) => {
+interface ButtonViewProps {
+  type: "DIFFICULTY" | "RESET" | "SUCCESSMODAL";
+  innerText: string;
+  onClick: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
+const ButtonView = ({ type, innerText, onClick }: ButtonViewProps) => {
   const ButtonType = buttonTypes[type];
   return (
     <ButtonType type="button" onClick={onClick} value={innerText}>
