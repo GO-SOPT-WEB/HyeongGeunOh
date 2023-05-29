@@ -1,18 +1,23 @@
-import { useGlobalContext } from '../../context/reducer';
-import { getRandomIndexArray } from '../../utils/getRandomIndexArray';
-import ButtonView from '../atom/ButtonView';
+import { useRecoilState } from "recoil";
+import { getRandomIndexArray } from "../../utils/getRandomIndexArray";
+import ButtonView from "../atom/ButtonView";
+import RootState from "../../recoil/atom";
 
 const SuccessModalButton = () => {
-  const { difficulty, clearCorrectCard, clearOpenCard, setRandomArray, setSuccessModalOpen } = useGlobalContext();
+  const [atomState, setAtomState] = useRecoilState(RootState);
+  const { difficulty } = atomState;
 
   return (
     <ButtonView
       type="SUCCESSMODAL"
       onClick={() => {
-        clearCorrectCard();
-        clearOpenCard();
-        setRandomArray(getRandomIndexArray(difficulty));
-        setSuccessModalOpen();
+        setAtomState((prev) => ({
+          ...prev,
+          correctCard: [],
+          openCard: [],
+          randomArray: getRandomIndexArray(difficulty),
+          successModalOpen: !prev.successModalOpen,
+        }));
       }}
       innerText="게임으로 돌아가기"
     />

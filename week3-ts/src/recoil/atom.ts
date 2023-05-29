@@ -4,7 +4,7 @@ export type RandomArrayType = Array<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>;
 
 export interface initialAtomStateProps {
   openCard: Array<{ url: string; index: number }>;
-  correctCard: string[] | [];
+  correctCard: string[];
   difficulty: "Easy" | "Normal" | "Hard";
   randomArray: RandomArrayType;
   successModalOpen: boolean;

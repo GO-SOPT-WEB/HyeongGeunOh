@@ -1,9 +1,11 @@
-import { useGlobalContext } from "../../context/reducer";
+import { useRecoilState } from "recoil";
 import CardView from "../atom/CardView";
+import RootState from "../../recoil/atom";
 
-const Card = ({ imgURL, index }) => {
+const Card = ({ imgURL, index }: { imgURL: string; index: number }) => {
   const url = imgURL.split("_")[1];
-  const { openCard, correctCard, addOpenCard } = useGlobalContext();
+  const [atomState, setAtomState] = useRecoilState(RootState);
+  const { openCard, correctCard } = atomState;
   const format = { url, index };
   const buttonOnclick = () => {
     if (
@@ -12,7 +14,7 @@ const Card = ({ imgURL, index }) => {
       openCard.length === 2
     )
       return;
-    addOpenCard(format);
+    setAtomState((prev) => ({ ...prev, openCard: [...prev.openCard, format] }));
   };
   const rotate =
     correctCard.includes(url) || openCard.some((x) => x.index === index);

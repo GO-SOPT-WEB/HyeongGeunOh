@@ -1,17 +1,22 @@
-import { useGlobalContext } from '../../context/reducer';
-import { getRandomIndexArray } from '../../utils/getRandomIndexArray';
-import ButtonView from '../atom/ButtonView';
+import { useRecoilState } from "recoil";
+import RootState from "../../recoil/atom";
+import { getRandomIndexArray } from "../../utils/getRandomIndexArray";
+import ButtonView from "../atom/ButtonView";
 
 const ResetButton = () => {
-  const { difficulty, clearCorrectCard, clearOpenCard, setRandomArray } = useGlobalContext();
+  const [atomState, setAtomState] = useRecoilState(RootState);
+  const { difficulty } = atomState;
 
   return (
     <ButtonView
       type="RESET"
       onClick={() => {
-        clearCorrectCard();
-        clearOpenCard();
-        setRandomArray(getRandomIndexArray(difficulty));
+        setAtomState((prev) => ({
+          ...prev,
+          correctCard: [],
+          openCard: [],
+          randomArray: getRandomIndexArray(difficulty),
+        }));
       }}
       innerText="RESET"
     />
