@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 
-import ImgChunks from "../../assets";
+import ImgChunks from "../../utils/makeImgChunk";
 import { getRandomIndexArray } from "../../utils/getRandomIndexArray";
 import Card from "../organism/Card";
 import { useRecoilState } from "recoil";
