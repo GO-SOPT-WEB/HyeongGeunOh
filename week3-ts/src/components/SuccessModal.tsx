@@ -1,9 +1,10 @@
-import { useGlobalContext } from '../context/reducer';
-import Modal from './organism/Modal';
-import ModalRenderer from './organism/ModalRenderer';
+import { useRecoilValue } from "recoil";
+import RootState from "../recoil/atom";
+import Modal from "./organism/Modal";
+import ModalRenderer from "./organism/ModalRenderer";
 
 const SuccessModal = () => {
-  const { successModalOpen } = useGlobalContext();
+  const { successModalOpen } = useRecoilValue(RootState);
   return (
     <>
       {successModalOpen && (
