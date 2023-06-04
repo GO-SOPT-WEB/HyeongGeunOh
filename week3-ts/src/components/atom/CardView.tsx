@@ -24,6 +24,7 @@ const StyledCardArticle = styled.article<{
   transform: ${({ rotate }) => rotate};
   transition-duration: 1s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   .card_frontface {
     width: 180px;
     height: 250px;
@@ -34,6 +35,7 @@ const StyledCardArticle = styled.article<{
     align-items: center;
     img {
       width: 150px;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
   }
@@ -46,6 +48,7 @@ const StyledCardArticle = styled.article<{
     background-color: #a11818;
     position: absolute;
     transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 `;
