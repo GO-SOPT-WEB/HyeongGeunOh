@@ -4,7 +4,7 @@ import RootState from "../../recoil/atom";
 import { useRecoilState } from "recoil";
 
 const DifficultyButtonTemplate = () => {
-  const [atomState, setAtomState] = useRecoilState(RootState);
+  const [, setAtomState] = useRecoilState(RootState);
 
   const difficultyHandler = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     setAtomState((prev) => {
